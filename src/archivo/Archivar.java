@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 public class Archivar {
    int z=0;
-    
+   String documento="C:\\Users\\alejandro\\Desktop\\numeros.txt";
     public void conteo(){
       Scanner archivo=null;
         try{
-      archivo= new Scanner(new File("C:\\Users\\alejandro\\Desktop\\numeros.txt"));
+      archivo= new Scanner(new File(documento));
       }
       catch(Exception e){
           System.out.println("archivo no encontrado!!");
@@ -32,7 +32,7 @@ public class Archivar {
         int num=0,l=0;
         Scanner archi=null;
         try{
-      archi= new Scanner(new File("C:\\Users\\alejandro\\Desktop\\numeros.txt"));
+      archi= new Scanner(new File(documento));
       }
       catch(Exception e){
           System.out.println("archivo no encontrado!!");
@@ -61,8 +61,9 @@ public class Archivar {
      
     if(arreglo[0]==z-1){
        System.out.println("el arreglo es de: "+arreglo[0]+" digitos"); 
-      for(int b=1;b<z;b++){
-       System.out.println(" "+arreglo[b]);
+       System.out.print("arreglo ordenado de forma descendente :");
+       for(int b=1;b<z;b++){
+       System.out.print(" "+arreglo[b]);
       }
     }
     else{System.out.println("el numero de elementos no corresponde con el numero especifico");}
